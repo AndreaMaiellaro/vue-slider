@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.slider-container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+.images {
+    padding: 3%;
+}
+
+.slider-carousel {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.slider-carousel .arrow {
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.circles {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 999px;
+}
+
+.circle {
+    color: white;
+    margin: 10px;
+}
+
+.circle.active {
+    color: blue;
+}
