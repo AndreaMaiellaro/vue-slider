@@ -19,29 +19,20 @@
 
             <div class="slider-carousel">
 
-                <div class="arrow left">
+                <div class="arrow left" @click="prevPhoto">
                     <i class="fas fa-chevron-left"></i>
                 </div>
 
                 <div class="images">
-                    <img class="last" src="img/montagne.webp" alt="#">
+                    <img :src="carouselImages[currentImg]" alt="#">
                 </div>
 
-                <div class="arrow right">
+                <div class="arrow right" @click="nextPhoto">
                     <i class="fas fa-chevron-right"></i>
                 </div>
 
                 <div class="circles">
-                    <span class="circle">
-                        <i class="fas fa-circle"></i>
-                    </span>
-                    <span class="circle">
-                        <i class="fas fa-circle"></i>
-                    </span>
-                    <span class="circle">
-                        <i class="fas fa-circle"></i>
-                    </span>
-                    <span class="circle">
+                    <span v-for="(image, index) in carouselImages" class="circle" :class=" { 'active': index == currentImg } ">
                         <i class="fas fa-circle"></i>
                     </span>
                 </div>
